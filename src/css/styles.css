@@ -1,0 +1,467 @@
+:root {
+    --text-color: #2C2D2E;
+    --second-text: #87898F;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+@media (max-width: 340px) {
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+body {
+    max-width: 360px;
+    min-width: 360px;
+    margin: auto;
+}
+
+@media (max-width: 820px) {
+    body {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+.app-container {
+    background: #F9F9F9;
+    padding: 0px 16px;
+    color: var(--text-color);
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+@media screen and (max-height: 700px) {
+    .app-container {
+        padding: 20px 16px 0px 16px;
+        height: auto;
+    }
+}
+
+.container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    border: #F3F3F3 solid 1px;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Блок в самом верху приложения */
+.app-bar {
+    max-width: 100%;
+    min-width: 100%;
+    justify-content: space-between;
+    padding-top: 48px;
+}
+
+.app-bar__title {
+    font-size: 18px;
+}
+
+@media (max-width: 340px) {
+    .app-bar__title {
+        font-size: 15px;
+    }
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 104px;
+    padding: 12px 0px;
+}
+
+.icons__crown-block {
+    padding: 7px 6px 7px 6px;
+    width: 36px;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+.icons__fire-block {
+    width: 60px;
+    padding: 7px 8px 7px 8px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+}
+
+
+/* Основная карточка */
+.top-card {
+    padding: 24px;
+    max-width: 100%;
+    flex-direction: column !important;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.top-card:hover {
+    box-shadow: 0px 0px 10px 0px #12192B0A;
+    transform: translateY(-2px);
+}
+
+.learning-menu {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.graduation-cap-block {
+    height: 58px;
+    width: 58px;
+    border-radius: 50%;
+    background: rgba(255, 227, 221, 0.5);
+    justify-content: center;
+    margin-right: 16px;
+}
+
+.top-card:hover .graduation-cap-block {
+    background: rgba(255, 227, 221, 1);
+}
+
+.learning-description__caption {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+@media (max-width: 340px) {
+    .learning-description__caption {
+        font-size: 18px;
+    }
+}
+
+.learning-description__name {
+    font-weight: 400;
+    color: var(--second-text);
+}
+
+.progress {
+    width: 100%;
+}
+
+.progress__text {
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    justify-content: space-between;
+}
+
+.progress-bar__indicator {
+    height: 6px;
+    border-radius: 5px;
+    width: 14%;
+    margin-right: 3px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 576px) and (max-width: 820px) {
+    .progress-bar__indicator {
+        margin-right: 10px;
+    }
+}
+
+.progress-bar__indicator_completed {
+    background: #52A754;
+}
+
+.progress-bar__indicator_unfulfilled {
+    background: #EEF6EE;
+}
+
+
+/* Меню режимов */
+.modes-menu {
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.modes-menu__item {
+    flex: 1;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 16px 12px;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 330px) {
+    .modes-menu__item {
+        padding: 5px 3px;
+    }
+}
+
+.modes-menu__item:hover {
+    transform: translateY(-1px);
+}
+
+.modes-menu__icon-block {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(107, 42, 188, 0.1);
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.modes-menu__item:hover .modes-menu__icon-block {
+    background: rgba(107, 42, 188, 0.2);
+}
+
+
+.modes-menu__icon-exam-block {
+    background: rgba(255, 32, 69, 0.1);
+}
+
+.modes-menu__item:hover .modes-menu__icon-exam-block {
+    background: rgba(255, 32, 69, 0.2);
+}
+
+.modes-menu__text {
+    font-size: 16px;
+    color: #212121;
+}
+
+@media (max-width: 340px) {
+    .modes-menu__text {
+        font-size: 13px;
+    }
+}
+
+/* Меню статистики */
+.statistic-menu {
+    margin: 24px -4% 0px -4%;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.statistic-menu__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.statistic-menu__item:hover {
+    transform: translateY(-1px);
+}
+
+.statistic-menu__icon-block {
+    min-width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #FF7355;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 340px) {
+    .statistic-menu__icon-block {
+        min-width: 45px;
+        height: 45px;
+    }
+}
+
+.statistic-menu__text {
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px;
+}
+
+
+/* Главное нижнее меню */
+
+.main-menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    border-radius: 24px 24px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0px;
+}
+
+@media screen and (max-height: 700px) {
+    .main-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: none;
+    }
+}
+
+.main-menu__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.main-menu__icon-block {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 13px;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.main-menu__icon-block_selected {
+    background: #FFF8F7;
+}
+
+.main-menu__text {
+    color: var(--second-text);
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 340px) {
+    .main-menu__text {
+        font-size: 10px;
+    }
+}
+
+
+/* Верхнее меню теста */
+
+.app-bar-test {
+    justify-content: normal;
+    text-decoration: none;
+    color: #2C2D2E;
+}
+
+.app-bar-test:hover {
+    transform: translateY(-2px);
+}
+
+.app-bar-test__arrow {
+    margin-right: 16px;
+}
+
+
+/* Меню в тесте */
+
+.test-menu {
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 26px;
+}
+
+.test-menu__item {
+    text-align: center;
+    width: 33%;
+}
+
+.test-menu__text {
+    color: #FF7355;
+    margin-bottom: 14px;
+}
+
+.test-menu__stripe {
+    border: solid 2px #FF7355;
+}
+
+
+/* Вопросы теста */
+
+.questions {
+    flex-wrap: wrap;
+    margin-right: -5%;
+}
+
+.questions__block {
+    width: 25%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 350px){
+    .questions__block {
+        width: 33%;
+    }
+}
+
+
+.questions__question {
+    max-width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0px 0px 4px 0px #12192B0A;
+}
+
+
+.questions__question:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 20px 0px #12192B0A;
+}
+
+.questions_half-moon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.questions_checked {
+    position: absolute;
+    top: 3px;
+    right: 1px;
+}
+
+@media (min-width: 576px) and (max-width: 820px){
+    .questions__block {
+        width: 20%;
+    }
+    .questions__question {
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .questions_half-moon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 92px;
+        height: 92px;
+    }
+
+    .questions_checked {
+        position: absolute;
+        top: 3px;
+        right: 1px;
+        width: 29px;
+        height: 29px;
+    }
+}
